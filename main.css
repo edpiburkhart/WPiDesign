@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css?family=Abel');
+
+body {
+    background-color: whitesmoke;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+    color: royalblue;
+    font-family: 'Abel', sans-serif;
+    font-size: 1.5em;
+}
+body>div {
+    display: inline-block;
+    vertical-align: middle;
+}
+.full {height: 100%;}
+.container {
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    width: 600px;
+    height: 600px;
+    background-color: white;
+    border-radius: 2px;
+    box-shadow: 0 0 10px black;
+    overflow: hidden;
+}
+.container .detail {
+    width: 99999px;
+    text-align: left;
+    transition: 250ms left;
+    position: relative;
+    left: 0;
+}
+.container  .detail>.day {
+    height: 450px;
+    width: 600px;
+    position: relative;
+    text-align: center;
+}
+.container .detail>.day:not(.today) {
+    background-color: royalblue;
+    color: white;
+}
+.container .forecast {
+    height: 150px;
+    box-sizing: border-box;
+}
+.detail>.day {
+    display: inline-block;
+}
+ .detail>.day>div {
+    position: absolute;
+}
+ .detail>.day .icon {
+    top: 0;
+    left: 0;
+    width: 60%;
+    height: 300px;
+}
+ .detail>.day .icon .wi:not(s) {font-size: 150px;}
+
+ .detail>.day div>i:not(s),  .detail>.day div>span {
+    display: inline-block;
+    vertical-align: middle;
+}
+ .detail>.day div:not(.icon)>i {
+    font-size: .75em;
+}
+ .detail>.day .icon i.s {
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    font-size: 50px;
+}
+ .detail>.day>:not(.icon) {
+    height: 50px;
+    line-height: 50px;
+}
+ .detail>.day .desc,  .detail>.day .temp {
+    width: 60%;
+    left: 0;
+    bottom: 50px;
+}
+
+ .detail>.day .desc {bottom: 100px;}
+ .detail>.day>:not(.icon)>i {margin-right: 10px;}
+
+ .detail>.day>:not(.icon):not(.desc):not(.temp) {
+    text-align: right;
+    margin-right: 25px;
+    padding-right: 25px;
+    border-right: 2px solid white;
+    height: 50px;
+    line-height: 50px;
+    right: 0;
+    width: 215px;
+    box-sizing: border-box;
+}
+.detail>.day.today>:not(.icon):not(.desc):not(.temp) {
+    border-right: 2px solid royalblue;
+}
+ .detail>.day .location {top: 50px;}
+ .detail>.day .visibility {top: 100px;}
+ .detail>.day .wind {top: 150px;}
+ .detail>.day .clouds {top: 200px;}
+ .detail>.day .sunrise {top: 300px;}
+ .detail>.day .sunset {top: 350px;}
+
+.detail>.day {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.forecast {
+    border-top: 2px solid royalblue;
+}
+.forecast .day {
+    box-sizing: border-box;
+    width: 120px;
+    height: 148px;
+    padding: 24px;
+    display: inline-block;
+    font-size: .6em;
+    transition: color 100ms, background-color 100ms, transform 100ms;
+    cursor: pointer;
+}
+.forecast .icon {
+    font-size: 25px;
+    height: 50px;
+}
+.forecast .icon>* {
+    display: inline-block;
+    vertical-align: middle;
+}
+.forecast .temp {
+    height: 25px;
+    line-height: 25px;
+}
+.forecast .temp>* {
+    width: 40%;
+    display: inline-block;
+}
+.forecast .dayName {
+    height: 25px;
+    line-height: 25px;
+}
+
+.forecast .day.active, .forecast .day:hover {
+    background-color: royalblue;
+    color: white;
+}
