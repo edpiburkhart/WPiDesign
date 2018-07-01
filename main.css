@@ -88,6 +88,7 @@ body>div {
 
  .detail>.day .desc {bottom: 100px;}
  .detail>.day>:not(.icon)>i {margin-right: 10px;}
+.tempicon {margin-left: 10px;}
 
  .detail>.day>:not(.icon):not(.desc):not(.temp) {
     text-align: right;
